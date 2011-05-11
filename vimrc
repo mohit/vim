@@ -1,4 +1,12 @@
+""""""PATHOGEN INITIALIZATION"""""""""""""""""
+filetype off                                                                
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
+
 """""""""""""""""""""""""GENERAL"""""""""""""""""""""""""""""""
+set nocompatible
+filetype plugin indent on
+
 syntax on
 set t_Co=256
 "set background=dark
@@ -7,8 +15,6 @@ set t_Co=256
 "colorscheme solarized 
 colorscheme busybee 
 
-set nocompatible
-filetype plugin indent on
 
 "matches previous indent level,
 "intelligently guesses indent (code level)

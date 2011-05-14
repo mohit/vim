@@ -15,7 +15,6 @@ set t_Co=256
 "colorscheme solarized 
 colorscheme BusyBee 
 
-
 "matches previous indent level,
 "intelligently guesses indent (code level)
 set autoindent
@@ -82,6 +81,8 @@ set directory=~/code/.tmpvim/swap
 "regenerate cscope
 nmap <F6> :!find . -iname "*.c" -o -iname "*.cpp" -o -iname "*.cc" -o -iname "*.c++" -o -iname "*.h" -o -iname "*.hpp" -o -iname "*.java" -o -iname "*.py" > cscope.files<CR>:!cscope -b<CR>:cs reset<CR><CR>
 
+"""""""""""""""""""""""""""SNIPMATE"""""""""""""""""""""""""""""
+let g:snippets_dir="~/.vim/bundle/snipmate_snippets"
 
 """""""""""""""""""""""""""JAVA SPECIFIC"""""""""""""""""""""""""""""
 "autocmd FileType java set foldmethod=syntax

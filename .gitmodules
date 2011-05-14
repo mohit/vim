@@ -1,48 +1,66 @@
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+    ignore = dirty
 [submodule "bundle/ack"]
 	path = bundle/ack
 	url = https://github.com/mileszs/ack.vim.git
+    ignore = dirty
 [submodule "bundle/a"]
 	path = bundle/a
 	url = https://github.com/vim-scripts/a.vim.git
+    ignore = dirty
 [submodule "bundle/tagbar"]
 	path = bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
+    ignore = dirty
 [submodule "bundle/align"]
 	path = bundle/align
 	url = https://github.com/tsaleh/vim-align.git
+    ignore = dirty
+    ignore = dirty
 [submodule "bundle/fuzzyfinder"]
 	path = bundle/fuzzyfinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
+    ignore = dirty
+    ignore = dirty
 [submodule "bundle/L9"]
 	path = bundle/L9
 	url = https://github.com/vim-scripts/L9.git
+    ignore = dirty
 [submodule "bundle/color_sampler"]
 	path = bundle/color_sampler
 	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
+    ignore = dirty
 [submodule "bundle/BusyBee"]
 	path = bundle/BusyBee
 	url = https://github.com/vim-scripts/BusyBee.git
+    ignore = dirty
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+    ignore = dirty
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = https://github.com/ervandew/supertab.git
+    ignore = dirty
 [submodule "bundle/cscope_macros"]
 	path = bundle/cscope_macros
 	url = https://github.com/vim-scripts/cscope_macros.vim.git
+    ignore = dirty
 [submodule "bundle/snipmate_snippets"]
 	path = bundle/snipmate_snippets
 	url = https://github.com/scrooloose/snipmate-snippets.git
+    ignore = dirty
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+    ignore = dirty
 [submodule "bundle/surround"]
 	path = bundle/surround
 	url = https://github.com/tpope/vim-surround.git
+    ignore = dirty
 [submodule "bundle/nerdcommenter"]
 	path = bundle/nerdcommenter
 	url = https://github.com/scrooloose/nerdcommenter.git
+    ignore = dirty

@@ -13,7 +13,7 @@ set t_Co=256
 "let g:solarized_termcolors=16
 
 "colorscheme solarized 
-colorscheme busybee 
+colorscheme BusyBee 
 
 
 "matches previous indent level,
@@ -130,7 +130,7 @@ let g:tagbar_autofocus=1
 
 
 "fuzzyfinder
-nnoremap <silent> <C-p> :FuzzyFinderFile <C-r>=expand('%:~:.')[:-1-len(expand('%:~:.:t'))]<CR><CR>
+nnoremap <silent> <C-p> :FufFile <C-r>=expand('%:~:.')[:-1-len(expand('%:~:.:t'))]<CR><CR>
 
 noremap <silent> <C-h> :bp<CR>
 noremap <silent> <C-l> :bn<CR>

@@ -16,3 +16,12 @@
 [submodule "bundle/fuzzyfinder"]
 	path = bundle/fuzzyfinder
 	url = https://github.com/vim-scripts/FuzzyFinder.git
+[submodule "bundle/L9"]
+	path = bundle/L9
+	url = https://github.com/vim-scripts/L9.git
+[submodule "bundle/color_sampler"]
+	path = bundle/color_sampler
+	url = https://github.com/vim-scripts/Color-Sampler-Pack.git
+[submodule "bundle/BusyBee"]
+	path = bundle/BusyBee
+	url = https://github.com/vim-scripts/BusyBee.git

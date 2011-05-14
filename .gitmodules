@@ -25,3 +25,21 @@
 [submodule "bundle/BusyBee"]
 	path = bundle/BusyBee
 	url = https://github.com/vim-scripts/BusyBee.git
+[submodule "bundle/solarized"]
+	path = bundle/solarized
+	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = https://github.com/ervandew/supertab.git
+[submodule "bundle/cscope_macros"]
+	path = bundle/cscope_macros
+	url = https://github.com/vim-scripts/cscope_macros.vim.git
+[submodule "bundle/snipmate_snippets"]
+	path = bundle/snipmate_snippets
+	url = https://github.com/scrooloose/snipmate-snippets.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/surround"]
+	path = bundle/surround
+	url = https://github.com/tpope/vim-surround.git

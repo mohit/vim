@@ -110,6 +110,11 @@ let g:SuperTabDefaultCompletionType = 'context'
 "Helps with completions not autofinishing first match
 set completeopt=longest,menu,preview
 
+
+"""""""""""""""""""""""""""PYTHON"""""""""""""""""""""""""""
+au FileType python set omnifunc=pythoncomplete#Complete
+
+
 """""""""""""""""""""""""""ECLIM""""""""""""""""""""""""""""""
 
 "eclim settings

@@ -67,3 +67,4 @@
 [submodule "bundle/cocoa"]
 	path = bundle/cocoa
 	url = https://github.com/msanders/cocoa.vim.git
+    ignore = dirty

@@ -7,6 +7,9 @@ call pathogen#helptags()
 set nocompatible
 filetype plugin indent on
 
+"allow mouse control
+set mouse=a
+
 syntax on
 set t_Co=256
 "set background=dark
@@ -137,6 +140,7 @@ let g:tagbar_autofocus=1
 
 "fuzzyfinder
 nnoremap <silent> <C-p> :FufFile <C-r>=expand('%:~:.')[:-1-len(expand('%:~:.:t'))]<CR><CR>
+let g:fuf_modesDisable = []
 
 noremap <silent> <C-h> :bp<CR>
 noremap <silent> <C-l> :bn<CR>
@@ -176,6 +180,7 @@ function! SparkleSetup()
     "paths
 
     cscope add ~/code/sparkle/sparkle/cscope.out                         ~/code/sparkle/sparkle
+    cscope add ~/code/sparkle/model/cscope.out                           ~/code/sparkle/model
     cscope add ~/code/sparkle_demo/sparkle_demo/cscope.out               ~/code/sparkle_demo/sparkle_demo
     cscope add ~/code/sparkle_client_java/sparkle_client_java/cscope.out ~/code/sparkle_client_java/sparkle_client_java
 

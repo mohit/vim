@@ -68,3 +68,7 @@
 	path = bundle/cocoa
 	url = https://github.com/msanders/cocoa.vim.git
     ignore = dirty
+[submodule "bundle/vcscommand"]
+	path = bundle/vcscommand
+	url = git://repo.or.cz/vcscommand
+    ignore = dirty

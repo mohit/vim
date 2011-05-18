@@ -7,7 +7,7 @@
 " set number
 
 " Change colorscheme
-colorscheme busybee
+colorscheme BusyBee
 "colorscheme candycode 
 
 " Turns on the tab bar always
@@ -23,10 +23,10 @@ set guioptions-=LIRrb
 
 " Sets the font and size
 " set guifont=Bitstream\ Vera\ Sans\ Mono:h18
-set guifont=Menlo\ Regular:h15
+set guifont=Monospace\ 12
 
 " full screen
-set fuopt=maxvert,maxhorz
+"set fuopt=maxvert,maxhorz
 
 " Sets the percent transparency
 " set transparency=10

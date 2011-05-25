@@ -72,3 +72,6 @@
 	path = bundle/vcscommand
 	url = git://repo.or.cz/vcscommand
     ignore = dirty
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = git://git.wincent.com/command-t.git

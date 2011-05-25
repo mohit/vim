@@ -7,6 +7,9 @@ call pathogen#helptags()
 set nocompatible
 filetype plugin indent on
 
+"read modeline at bottom of files
+set modeline
+
 "allow mouse control
 set mouse=a
 
@@ -193,6 +196,8 @@ function! SparkleSetup()
     cscope add ~/code/web_java_1.16/cscope.out                           ~/code/web_java_1.16/
     cscope add ~/code/ws_java_1.4/cscope.out                             ~/code/ws_java_1.4/
     cscope add ~/code/c2dm/cscope.out                                    ~/code/c2dm/
+    
+    cscope add ~/Downloads/spring_3.0.5/spring-framework-3.0.5.RELEASE/src/cscope.out ~/Downloads/spring_3.0.5/spring-framework-3.0.5.RELEASE/src/
 endfunction
 
 function! SparkleClientSetup()

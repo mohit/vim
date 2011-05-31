@@ -140,11 +140,6 @@ endif
 nnoremap <silent> <cr> :TagbarToggle<CR>
 let g:tagbar_autofocus=1
 
-
-"fuzzyfinder
-nnoremap <silent> <C-p> :FufFile <C-r>=expand('%:~:.')[:-1-len(expand('%:~:.:t'))]<CR><CR>
-let g:fuf_modesDisable = []
-
 noremap <silent> <C-h> :bp<CR>
 noremap <silent> <C-l> :bn<CR>
 
@@ -182,30 +177,30 @@ function! SparkleSetup()
     "add cscope db also prepend source paths, cscope can't handle relative
     "paths
 
-    cscope add ~/code/sparkle/sparkle/cscope.out                         ~/code/sparkle/sparkle
-    cscope add ~/code/sparkle/model/cscope.out                           ~/code/sparkle/model
-    cscope add ~/code/sparkle_demo/sparkle_demo/cscope.out               ~/code/sparkle_demo/sparkle_demo
-    cscope add ~/code/sparkle_client_java/sparkle_client_java/cscope.out ~/code/sparkle_client_java/sparkle_client_java
+    cscope add /usr/local/code/sparkle/sparkle/cscope.out                         /usr/local/code/sparkle/sparkle
+    cscope add /usr/local/code/sparkle/model/cscope.out                           /usr/local/code/sparkle/model
+    cscope add /usr/local/code/sparkle_demo/sparkle_demo/cscope.out               /usr/local/code/sparkle_demo/sparkle_demo
+    cscope add /usr/local/code/sparkle_client_java/sparkle_client_java/cscope.out /usr/local/code/sparkle_client_java/sparkle_client_java
 
-    cscope add ~/code/db_java_1.14/cscope.out                            ~/code/db_java_1.14/
-    cscope add ~/code/factory_java_1.7/cscope.out                        ~/code/factory_java_1.7/
-    cscope add ~/code/logging_java_1.9/cscope.out                        ~/code/logging_java_1.9/
-    cscope add ~/code/mobile_account/cscope.out                          ~/code/mobile_account/
-    cscope add ~/code/rest_java/cscope.out                               ~/code/rest_java/
-    cscope add ~/code/sms_java_1.9/cscope.out                            ~/code/sms_java_1.9/
-    cscope add ~/code/web_java_1.16/cscope.out                           ~/code/web_java_1.16/
-    cscope add ~/code/ws_java_1.4/cscope.out                             ~/code/ws_java_1.4/
-    cscope add ~/code/c2dm/cscope.out                                    ~/code/c2dm/
+    cscope add /usr/local/code/db_java_1.14/cscope.out                            /usr/local/code/db_java_1.14/
+    cscope add /usr/local/code/factory_java_1.7/cscope.out                        /usr/local/code/factory_java_1.7/
+    cscope add /usr/local/code/logging_java/cscope.out                            /usr/local/code/logging_java/
+    cscope add /usr/local/code/mobile_account/cscope.out                          /usr/local/code/mobile_account/
+    cscope add /usr/local/code/rest_java/cscope.out                               /usr/local/code/rest_java/
+    cscope add /usr/local/code/sms_java_1.9/cscope.out                            /usr/local/code/sms_java_1.9/
+    cscope add /usr/local/code/web_java/cscope.out                                /usr/local/code/web_java/
+    cscope add /usr/local/code/ws_java_1.4/cscope.out                             /usr/local/code/ws_java_1.4/
+    cscope add /usr/local/code/c2dm/cscope.out                                    /usr/local/code/c2dm/
     
-    cscope add ~/Downloads/spring_3.0.5/spring-framework-3.0.5.RELEASE/src/cscope.out ~/Downloads/spring_3.0.5/spring-framework-3.0.5.RELEASE/src/
+    cscope add /usr/local/code/spring-framework-3.0.5.RELEASE/src/cscope.out      /usr/local/code/spring-framework-3.0.5.RELEASE/src/
 endfunction
 
 function! SparkleClientSetup()
     "add cscope db also prepend source paths, cscope can't handle relative
     "paths
 
-    cscope add ~/code/sparkle_client_java/cscope.out ~/code/sparkle_client_java/
-    cscope add ~/code/web_java_1.16/cscope.out       ~/code/web_java_1.16/
+    cscope add /usr/local/code/sparkle_client_java/cscope.out /usr/local/code/sparkle_client_java/
+    cscope add /usr/local/code/web_java_1.16/cscope.out       /usr/local/code/web_java_1.16/
 endfunction
 
 function! PolyOmniSetup()

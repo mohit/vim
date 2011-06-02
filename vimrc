@@ -132,6 +132,9 @@ if 1
     "nnoremap <silent><buffer><Space> :JavaSearchContext<cr>
 endif
 
+"ImportMissing
+nmap <silent><leader>m :JavaImportMissing<CR>
+
 """""""""""""""""""""""""""MAPPINGS"""""""""""""""""""""""""""
 
 "Taglist
@@ -149,6 +152,9 @@ map <C-j> <Esc>
 
 "Trick if forgot to sudo
 cmap w!! w !sudo tee % > /dev/null
+
+"VCSVimDiff
+nmap <silent><leader>v :VCSVimDiff<CR>
 
 """"""""""""""""""""""""""""""NERDTree""""""""""""""""""""""""""""""
 

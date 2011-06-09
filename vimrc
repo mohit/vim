@@ -28,8 +28,8 @@ set smartindent
 
 "tab = 4 spaces "indent spaces = 4 and tab to spaces
 set expandtab
-set tabstop=4 
-set shiftwidth=4
+set tabstop=3 
+set shiftwidth=3
 
 "allowing backspace to work after indent -> see :help i_backspacing
 set backspace=indent,eol,start

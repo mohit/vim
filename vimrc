@@ -26,7 +26,7 @@ colorscheme BusyBee
 set autoindent
 set smartindent
 
-"tab = 4 spaces "indent spaces = 4 and tab to spaces
+"tab = 3 spaces "indent spaces = 3 and tab to spaces
 set expandtab
 set tabstop=3 
 set shiftwidth=3
@@ -163,6 +163,9 @@ nnoremap <silent> <C-n> :NERDTreeToggle<CR>
 
 "change nerdtree directory to directory containing current file Ctr-d goto dir
 nnoremap <silent> <C-d> :NERDTree %:h<CR>
+
+"ignore files
+let NERDTreeIgnore=['\.pyc$', '\~$']
 
 """"""""""""""""""""""""""""""AcK""""""""""""""""""""""""""""""
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"

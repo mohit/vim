@@ -45,7 +45,6 @@ set ruler
 set hls
 set incsearch
 
-
 "specialized leader key
 let mapleader=","
 
@@ -105,7 +104,7 @@ nmap <silent> <F7> :call ToggleComments()<CR>
 """""""""""""""""""""""""""C SPECIFIC"""""""""""""""""""""""""""""
 "autocmd FileType c set foldmethod=syntax
 
-"""""""""""""""""""""""""""SUPERTAG"""""""""""""""""""""""""""
+"""""""""""""""""""""""""""SUPERTAB"""""""""""""""""""""""""""
 
 "set completion type to change based on context around it
 let g:SuperTabDefaultCompletionType = 'context'

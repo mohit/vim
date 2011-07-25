@@ -72,3 +72,6 @@
 [submodule "bundle/jinja"]
 	path = bundle/jinja
 	url = https://github.com/vim-scripts/Jinja.git
+[submodule "bundle/pythonvim"]
+	path = bundle/pythonvim
+	url = https://github.com/sorin-ionescu/python.vim.git

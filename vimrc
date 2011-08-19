@@ -26,10 +26,10 @@ colorscheme BusyBee
 set autoindent
 set smartindent
 
-"tab = 3 spaces "indent spaces = 3 and tab to spaces
+"tab = 4 spaces "indent spaces = 4 and tab to spaces
 set expandtab
-set tabstop=3 
-set shiftwidth=3
+set tabstop=4 
+set shiftwidth=4
 
 "allowing backspace to work after indent -> see :help i_backspacing
 set backspace=indent,eol,start
@@ -199,6 +199,7 @@ function! SparkleSetup()
     cscope add /usr/local/code/web_java/cscope.out                                /usr/local/code/web_java/
     cscope add /usr/local/code/ws_java_1.4/cscope.out                             /usr/local/code/ws_java_1.4/
     cscope add /usr/local/code/c2dm/cscope.out                                    /usr/local/code/c2dm/
+    cscope add /usr/local/code/cache_java/cscope.out                              /usr/local/code/cache_java/
     
     cscope add /usr/local/code/spring-framework-3.0.5.RELEASE/src/cscope.out      /usr/local/code/spring-framework-3.0.5.RELEASE/src/
 endfunction

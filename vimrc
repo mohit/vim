@@ -84,7 +84,7 @@ set directory=~/code/.tmpvim/swap
 "autocmd FileType python set tags+=~/.vim/tags/python_tags
 
 "regenerate cscope
-nmap <F6> :!find . -iname "*.c" -o -iname "*.cpp" -o -iname "*.cc" -o -iname "*.c++" -o -iname "*.h" -o -iname "*.hpp" -o -iname "*.java" -o -iname "*.py" > cscope.files<CR>:!cscope -b<CR>:cs reset<CR><CR>
+nmap <F6> :!find . -iname "*.c" -o -iname "*.cpp" -o -iname "*.cc" -o -iname "*.c++" -o -iname "*.h" -o -iname "*.hpp" -o -iname "*.java" -o -iname "*.py" -o -iname "*.scala" > cscope.files<CR>:!cscope -b<CR>:cs reset<CR><CR>
 
 """""""""""""""""""""""""""SNIPMATE"""""""""""""""""""""""""""""
 let g:snippets_dir="~/.vim/bundle/snipmate_snippets"

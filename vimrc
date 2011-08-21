@@ -24,6 +24,7 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'msanders/cocoa.vim'
 Bundle 'sorin-ionescu/python.vim'
+Bundle 'riobard/scala.vim'
 
 Bundle 'MarcWeber/vim-addon-async'
 Bundle 'MarcWeber/vim-addon-completion'

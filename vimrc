@@ -1,7 +1,42 @@
 """"""PATHOGEN INITIALIZATION"""""""""""""""""
-filetype off                                                                
-call pathogen#runtime_append_all_bundles()
-call pathogen#helptags()
+set nocompatible
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+" let Vundle manage Vundle
+" required! 
+Bundle 'gmarik/vundle'
+
+" My Bundles here:
+"
+" original repos on github
+Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'mileszs/ack.vim'
+Bundle 'majutsushi/tagbar'
+Bundle 'tsaleh/vim-align'
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'ervandew/supertab'
+Bundle 'scrooloose/snipmate-snippets'
+Bundle 'msanders/snipmate.vim'
+Bundle 'tpope/vim-surround'
+Bundle 'msanders/cocoa.vim'
+Bundle 'sorin-ionescu/python.vim'
+" vim-scripts repos
+Bundle 'a.vim'
+Bundle 'L9'
+Bundle 'Color-Sampler-Pack'
+Bundle 'BusyBee'
+Bundle 'cscope_macros.vim'
+Bundle 'Jinja'
+" non github repos
+Bundle 'git://git.wincent.com/command-t.git'
+Bundle 'git://repo.or.cz/vcscommand'
+" ...
+
+filetype plugin indent on     " required!off                                                                
 
 """""""""""""""""""""""""GENERAL"""""""""""""""""""""""""""""""
 set nocompatible

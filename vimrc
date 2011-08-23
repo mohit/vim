@@ -26,10 +26,10 @@ Bundle 'msanders/cocoa.vim'
 Bundle 'sorin-ionescu/python.vim'
 Bundle 'riobard/scala.vim'
 
-Bundle 'MarcWeber/vim-addon-async'
-Bundle 'MarcWeber/vim-addon-completion'
-Bundle 'MarcWeber/vim-addon-json-encoding'
-Bundle 'MarcWeber/ensime', {'rtp': 'vim/'}
+"Bundle 'MarcWeber/vim-addon-async'
+"Bundle 'MarcWeber/vim-addon-completion'
+"Bundle 'MarcWeber/vim-addon-json-encoding'
+"Bundle 'MarcWeber/ensime', {'rtp': 'vim/'}
 " vim-scripts repoon
 Bundle 'a.vim'
 Bundle 'L9'

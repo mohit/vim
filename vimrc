@@ -25,6 +25,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'msanders/cocoa.vim'
 Bundle 'sorin-ionescu/python.vim'
 Bundle 'riobard/scala.vim'
+Bundle 'Rip-Rip/clang_complete'
 
 "Bundle 'MarcWeber/vim-addon-async'
 "Bundle 'MarcWeber/vim-addon-completion'
@@ -206,6 +207,11 @@ nnoremap <silent> <C-d> :NERDTree %:h<CR>
 
 "ignore files
 let NERDTreeIgnore=['\.pyc$', '\~$']
+
+""""""""""""""""""""""""""""""Clang_complete""""""""""""""""""""""""""""""
+let g:clang_auto_select=0
+let g:clang_complete_auto=0
+let g:clang_hl_errors=1
 
 """"""""""""""""""""""""""""""AcK""""""""""""""""""""""""""""""
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"

@@ -8,7 +8,8 @@ call vundle#rc()
 " required! 
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
+" Bundles :
+Bundle 'git@github.com:esiegel/snipmate-snippets.git'
 "
 " original repos on github
 Bundle 'scrooloose/nerdtree'
@@ -18,7 +19,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tsaleh/vim-align'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
-Bundle 'scrooloose/snipmate-snippets'
+Bundle 'esiegel/snipmate-snippets'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'msanders/cocoa.vim'

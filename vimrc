@@ -19,7 +19,6 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tsaleh/vim-align'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
-Bundle 'esiegel/snipmate-snippets'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'msanders/cocoa.vim'
@@ -184,8 +183,13 @@ nmap <silent><leader>m :JavaImportMissing<CR>
 nnoremap <silent> <cr> :TagbarToggle<CR>
 let g:tagbar_autofocus=1
 
+"change to next and previous buffers
 noremap <silent> <C-h> :bp<CR>
 noremap <silent> <C-l> :bn<CR>
+
+"change to next quickfix error
+noremap <silent><leader>h :cp<CR>
+noremap <silent><leader>l :cn<CR>
 
 "caps to escape
 map! <C-j> <Esc>
@@ -249,6 +253,8 @@ function! SparkleSetup()
     cscope add /usr/local/code/ws_java_1.4/cscope.out                             /usr/local/code/ws_java_1.4/
     cscope add /usr/local/code/c2dm/cscope.out                                    /usr/local/code/c2dm/
     cscope add /usr/local/code/cache_java/cscope.out                              /usr/local/code/cache_java/
+    cscope add /usr/local/code/oauth_java/cscope.out                              /usr/local/code/oauth_java/
+    cscope add /usr/local/code/redis_java/cscope.out                              /usr/local/code/redis_java/
     
     cscope add /usr/local/code/spring-framework-3.0.5.RELEASE/src/cscope.out      /usr/local/code/spring-framework-3.0.5.RELEASE/src/
 endfunction

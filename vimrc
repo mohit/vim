@@ -127,6 +127,41 @@ set directory=~/code/.tmpvim/swap
 "regenerate cscope
 nmap <F6> :!find . -iname "*.c" -o -iname "*.cpp" -o -iname "*.cc" -o -iname "*.c++" -o -iname "*.h" -o -iname "*.hpp" -o -iname "*.java" -o -iname "*.py" -o -iname "*.scala" > cscope.files<CR>:!cscope -b<CR>:cs reset<CR><CR>
 
+" scala
+let g:tagbar_type_scala= {
+    \ 'ctagstype' : 'scala',
+    \ 'kinds'     : [
+        \ 'p:packages:1',
+        \ 'V:values:0',
+        \ 'v:variables:0',
+        \ 'T:types:0',
+        \ 't:traits:0',
+        \ 'o:objects:0',
+        \ 'a:abclasses:0',
+        \ 'c:classes:0',
+        \ 'r:caclasses:0',
+        \ 'm:methods:0'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 'T' : 'type',
+        \ 't' : 'trait',
+        \ 'o' : 'object',
+        \ 'a' : 'abstract class',
+        \ 'c' : 'class',
+        \ 'r' : 'case class'
+    \ },
+    \ 'scope2kind' : {
+        \ 'type' : 'T',
+        \ 'trait' : 't',
+        \ 'object' : 'o',
+        \ 'abstract class' : 'a',
+        \ 'class' : 'c',
+        \ 'case class' : 'r'  
+    \ },
+    \ 'sort'    : 0
+\ }
+
 """""""""""""""""""""""""""SNIPMATE"""""""""""""""""""""""""""""
 let g:snippets_dir="~/.vim/bundle/snipmate-snippets"
 

@@ -3,13 +3,13 @@ set nocompatible
 filetype off
 
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
+call vundle#rc() 
 " let Vundle manage Vundle
 " required! 
 Bundle 'gmarik/vundle'
 
-" My Bundles here:
+" Bundles :
+Bundle 'git@github.com:esiegel/snipmate-snippets.git'
 "
 " original repos on github
 Bundle 'scrooloose/nerdtree'
@@ -19,12 +19,18 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tsaleh/vim-align'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
-Bundle 'scrooloose/snipmate-snippets'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'msanders/cocoa.vim'
 Bundle 'sorin-ionescu/python.vim'
 Bundle 'riobard/scala.vim'
+Bundle 'Rip-Rip/clang_complete'
+
+"Bundle 'MarcWeber/vim-addon-async'
+"Bundle 'MarcWeber/vim-addon-completion'
+"Bundle 'MarcWeber/vim-addon-json-encoding'
+"Bundle 'MarcWeber/ensime', {'rtp': 'vim/'}
+
 " vim-scripts repoon
 Bundle 'a.vim'
 Bundle 'L9'
@@ -122,8 +128,43 @@ set directory=~/code/.tmpvim/swap
 "regenerate cscope
 nmap <F6> :!find . -iname "*.c" -o -iname "*.cpp" -o -iname "*.cc" -o -iname "*.c++" -o -iname "*.h" -o -iname "*.hpp" -o -iname "*.java" -o -iname "*.py" -o -iname "*.scala" > cscope.files<CR>:!cscope -b<CR>:cs reset<CR><CR>
 
+" scala
+let g:tagbar_type_scala= {
+    \ 'ctagstype' : 'scala',
+    \ 'kinds'     : [
+        \ 'p:packages:1',
+        \ 'V:values:0',
+        \ 'v:variables:0',
+        \ 'T:types:0',
+        \ 't:traits:0',
+        \ 'o:objects:0',
+        \ 'a:abclasses:0',
+        \ 'c:classes:0',
+        \ 'r:caclasses:0',
+        \ 'm:methods:0'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 'T' : 'type',
+        \ 't' : 'trait',
+        \ 'o' : 'object',
+        \ 'a' : 'abstract class',
+        \ 'c' : 'class',
+        \ 'r' : 'case class'
+    \ },
+    \ 'scope2kind' : {
+        \ 'type' : 'T',
+        \ 'trait' : 't',
+        \ 'object' : 'o',
+        \ 'abstract class' : 'a',
+        \ 'class' : 'c',
+        \ 'case class' : 'r'  
+    \ },
+    \ 'sort'    : 0
+\ }
+
 """""""""""""""""""""""""""SNIPMATE"""""""""""""""""""""""""""""
-let g:snippets_dir="~/.vim/bundle/snipmate_snippets"
+let g:snippets_dir="~/.vim/bundle/snipmate-snippets"
 
 """""""""""""""""""""""""""JAVA SPECIFIC"""""""""""""""""""""""""""""
 "autocmd FileType java set foldmethod=syntax
@@ -178,8 +219,13 @@ nmap <silent><leader>m :JavaImportMissing<CR>
 nnoremap <silent> <cr> :TagbarToggle<CR>
 let g:tagbar_autofocus=1
 
+"change to next and previous buffers
 noremap <silent> <C-h> :bp<CR>
 noremap <silent> <C-l> :bn<CR>
+
+"change to next quickfix error
+noremap <silent><leader>h :cp<CR>
+noremap <silent><leader>l :cn<CR>
 
 "caps to escape
 map! <C-j> <Esc>
@@ -202,6 +248,11 @@ nnoremap <silent> <C-d> :NERDTree %:h<CR>
 "ignore files
 let NERDTreeIgnore=['\.pyc$', '\~$']
 
+""""""""""""""""""""""""""""""Clang_complete""""""""""""""""""""""""""""""
+let g:clang_auto_select=0
+let g:clang_complete_auto=0
+let g:clang_hl_errors=1
+
 """"""""""""""""""""""""""""""AcK""""""""""""""""""""""""""""""
 let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 if !empty(matchstr(hostname(), "ebox"))
@@ -223,6 +274,8 @@ function! SparkleSetup()
 
     cscope add /usr/local/code/sparkle/sparkle/cscope.out                         /usr/local/code/sparkle/sparkle
     cscope add /usr/local/code/sparkle/model/cscope.out                           /usr/local/code/sparkle/model
+    cscope add /usr/local/code/sparkle/invitation_service/cscope.out              /usr/local/code/sparkle/invitation_service
+    cscope add /usr/local/code/sparkle/smsrouter/cscope.out                       /usr/local/code/sparkle/smsrouter
     cscope add /usr/local/code/sparkle_demo/sparkle_demo/cscope.out               /usr/local/code/sparkle_demo/sparkle_demo
     cscope add /usr/local/code/sparkle_client_java/sparkle_client_java/cscope.out /usr/local/code/sparkle_client_java/sparkle_client_java
 
@@ -236,6 +289,8 @@ function! SparkleSetup()
     cscope add /usr/local/code/ws_java_1.4/cscope.out                             /usr/local/code/ws_java_1.4/
     cscope add /usr/local/code/c2dm/cscope.out                                    /usr/local/code/c2dm/
     cscope add /usr/local/code/cache_java/cscope.out                              /usr/local/code/cache_java/
+    cscope add /usr/local/code/oauth_java/cscope.out                              /usr/local/code/oauth_java/
+    cscope add /usr/local/code/redis_java/cscope.out                              /usr/local/code/redis_java/
     
     cscope add /usr/local/code/spring-framework-3.0.5.RELEASE/src/cscope.out      /usr/local/code/spring-framework-3.0.5.RELEASE/src/
 endfunction

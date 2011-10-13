@@ -38,6 +38,7 @@ Bundle 'Color-Sampler-Pack'
 Bundle 'BusyBee'
 Bundle 'cscope_macros.vim'
 Bundle 'Jinja'
+Bundle 'octave.vim--'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://repo.or.cz/vcscommand'

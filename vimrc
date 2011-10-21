@@ -30,6 +30,7 @@ Bundle 'Rip-Rip/clang_complete'
 "Bundle 'MarcWeber/vim-addon-completion'
 "Bundle 'MarcWeber/vim-addon-json-encoding'
 "Bundle 'MarcWeber/ensime', {'rtp': 'vim/'}
+
 " vim-scripts repoon
 Bundle 'a.vim'
 Bundle 'L9'
@@ -37,6 +38,7 @@ Bundle 'Color-Sampler-Pack'
 Bundle 'BusyBee'
 Bundle 'cscope_macros.vim'
 Bundle 'Jinja'
+Bundle 'octave.vim--'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://repo.or.cz/vcscommand'

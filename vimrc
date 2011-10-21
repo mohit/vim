@@ -290,6 +290,7 @@ function! SparkleSetup()
     cscope add /usr/local/code/cache_java/cscope.out                              /usr/local/code/cache_java/
     cscope add /usr/local/code/oauth_java/cscope.out                              /usr/local/code/oauth_java/
     cscope add /usr/local/code/redis_java/cscope.out                              /usr/local/code/redis_java/
+    cscope add /usr/local/code/schedule_java/cscope.out                           /usr/local/code/schedule_java/
     
     cscope add /usr/local/code/spring-framework-3.0.5.RELEASE/src/cscope.out      /usr/local/code/spring-framework-3.0.5.RELEASE/src/
 endfunction

@@ -96,7 +96,6 @@ let mapleader=","
 
 "removes highlighting from search after space
 :noremap <silent> <Space> :silent noh<Bar>echo<CR>
-    
 
 "no search wraps
 set nowrapscan
@@ -233,7 +232,7 @@ map! <C-j> <Esc>
 map <C-j> <Esc>
 
 "Trick if forgot to sudo
-cmap w!! w !sudo tee % > /dev/null
+cmap w!! %!sudo tee > /dev/null %
 
 "VCSVimDiff
 nmap <silent><leader>v :VCSVimDiff<CR>
@@ -269,18 +268,25 @@ if !empty(matchstr(hostname(), "eric"))
     let s:codedir = "/usr/local/code"
 endif
 
+function! AntSingle()
+    "change ant single to current file
+    ! python ~/code/eric/scripts/change_ant_single.py %:p
+    ! ant single
+endfunction
+
 function! SparkleSetup()
     "add cscope db also prepend source paths, cscope can't handle relative
     "paths
 
     cscope add /usr/local/code/sparkle/sparkle/cscope.out                         /usr/local/code/sparkle/sparkle
     cscope add /usr/local/code/sparkle/model/cscope.out                           /usr/local/code/sparkle/model
+    cscope add /usr/local/code/sparkle/common/cscope.out                          /usr/local/code/sparkle/common
     cscope add /usr/local/code/sparkle/invitation_service/cscope.out              /usr/local/code/sparkle/invitation_service
     cscope add /usr/local/code/sparkle/smsrouter/cscope.out                       /usr/local/code/sparkle/smsrouter
-    cscope add /usr/local/code/sparkle_demo/sparkle_demo/cscope.out               /usr/local/code/sparkle_demo/sparkle_demo
+    cscope add /usr/local/code/sparkle_demo/cscope.out                            /usr/local/code/sparkle_demo
     cscope add /usr/local/code/sparkle_client_java/sparkle_client_java/cscope.out /usr/local/code/sparkle_client_java/sparkle_client_java
 
-    cscope add /usr/local/code/db_java_1.14/cscope.out                            /usr/local/code/db_java_1.14/
+    cscope add /usr/local/code/db_java/cscope.out                                 /usr/local/code/db_java/
     cscope add /usr/local/code/factory_java_1.7/cscope.out                        /usr/local/code/factory_java_1.7/
     cscope add /usr/local/code/logging_java/cscope.out                            /usr/local/code/logging_java/
     cscope add /usr/local/code/mobile_account/cscope.out                          /usr/local/code/mobile_account/

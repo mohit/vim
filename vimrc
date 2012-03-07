@@ -23,8 +23,8 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'msanders/cocoa.vim'
 Bundle 'sorin-ionescu/python.vim'
-Bundle 'riobard/scala.vim'
-Bundle 'Rip-Rip/clang_complete'
+"Bundle 'riobard/scala.vim'
+"Bundle 'Rip-Rip/clang_complete'
 
 "Bundle 'MarcWeber/vim-addon-async'
 "Bundle 'MarcWeber/vim-addon-completion'
@@ -43,8 +43,6 @@ Bundle 'octave.vim--'
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://repo.or.cz/vcscommand'
 " ...
-
-filetype plugin indent on     " required!off                                                                
 
 """""""""""""""""""""""""GENERAL"""""""""""""""""""""""""""""""
 set nocompatible
@@ -71,8 +69,8 @@ set smartindent
 
 "tab = 4 spaces "indent spaces = 4 and tab to spaces
 set expandtab
-set tabstop=4 
-set shiftwidth=4
+set tabstop=3
+set shiftwidth=3
 
 "allowing backspace to work after indent -> see :help i_backspacing
 set backspace=indent,eol,start
@@ -92,7 +90,7 @@ set hls
 set incsearch
 
 "specialized leader key
-let mapleader=","
+let mapleader="\\"
 
 "removes highlighting from search after space
 :noremap <silent> <Space> :silent noh<Bar>echo<CR>
@@ -187,7 +185,7 @@ nmap <silent> <F7> :call ToggleComments()<CR>
 """""""""""""""""""""""""""SUPERTAB"""""""""""""""""""""""""""
 
 "set completion type to change based on context around it
-let g:SuperTabDefaultCompletionType = 'context'
+let g:SuperTabDefaultCompletionType = "context"
 
 "Helps with completions not autofinishing first match
 set completeopt=longest,menu,preview
@@ -278,41 +276,41 @@ function! SparkleSetup()
     "add cscope db also prepend source paths, cscope can't handle relative
     "paths
 
-    cscope add /usr/local/code/sparkle/sparkle/cscope.out                         /usr/local/code/sparkle/sparkle
-    cscope add /usr/local/code/sparkle/model/cscope.out                           /usr/local/code/sparkle/model
-    cscope add /usr/local/code/sparkle/common/cscope.out                          /usr/local/code/sparkle/common
-    cscope add /usr/local/code/sparkle/invitation_service/cscope.out              /usr/local/code/sparkle/invitation_service
-    cscope add /usr/local/code/sparkle/smsrouter/cscope.out                       /usr/local/code/sparkle/smsrouter
-    cscope add /usr/local/code/sparkle_demo/cscope.out                            /usr/local/code/sparkle_demo
-    cscope add /usr/local/code/sparkle_client_java/sparkle_client_java/cscope.out /usr/local/code/sparkle_client_java/sparkle_client_java
+    cscope add /home/mohit/code/sparkle/sparkle/cscope.out                         /home/mohit/code/sparkle/sparkle
+    cscope add /home/mohit/code/sparkle/model/cscope.out                           /home/mohit/code/sparkle/model
+    cscope add /home/mohit/code/sparkle/common/cscope.out                          /home/mohit/code/sparkle/common
+    cscope add /home/mohit/code/sparkle/invitation_service/cscope.out              /home/mohit/code/sparkle/invitation_service
+    cscope add /home/mohit/code/sparkle/smsrouter/cscope.out                       /home/mohit/code/sparkle/smsrouter
+    cscope add /home/mohit/code/sparkle_demo/cscope.out                            /home/mohit/code/sparkle_demo
+    cscope add /home/mohit/code/sparkle_client_java/sparkle_client_java/cscope.out /home/mohit/code/sparkle_client_java/sparkle_client_java
 
-    cscope add /usr/local/code/db_java/cscope.out                                 /usr/local/code/db_java/
-    cscope add /usr/local/code/factory_java_1.7/cscope.out                        /usr/local/code/factory_java_1.7/
-    cscope add /usr/local/code/logging_java/cscope.out                            /usr/local/code/logging_java/
-    cscope add /usr/local/code/mobile_account/cscope.out                          /usr/local/code/mobile_account/
-    cscope add /usr/local/code/rest_java/cscope.out                               /usr/local/code/rest_java/
-    cscope add /usr/local/code/sms_java_1.9/cscope.out                            /usr/local/code/sms_java_1.9/
-    cscope add /usr/local/code/web_java/cscope.out                                /usr/local/code/web_java/
-    cscope add /usr/local/code/ws_java_1.4/cscope.out                             /usr/local/code/ws_java_1.4/
-    cscope add /usr/local/code/c2dm/cscope.out                                    /usr/local/code/c2dm/
-    cscope add /usr/local/code/cache_java/cscope.out                              /usr/local/code/cache_java/
-    cscope add /usr/local/code/oauth_java/cscope.out                              /usr/local/code/oauth_java/
-    cscope add /usr/local/code/redis_java/cscope.out                              /usr/local/code/redis_java/
-    cscope add /usr/local/code/schedule_java/cscope.out                           /usr/local/code/schedule_java/
+    cscope add /home/mohit/code/db_java/cscope.out                                 /home/mohit/code/db_java/
+    cscope add /home/mohit/code/factory_java_1.7/cscope.out                        /home/mohit/code/factory_java_1.7/
+    cscope add /home/mohit/code/logging_java/cscope.out                            /home/mohit/code/logging_java/
+    cscope add /home/mohit/code/mobile_account/cscope.out                          /home/mohit/code/mobile_account/
+    cscope add /home/mohit/code/rest_java/cscope.out                               /home/mohit/code/rest_java/
+    cscope add /home/mohit/code/sms_java_1.9/cscope.out                            /home/mohit/code/sms_java_1.9/
+    cscope add /home/mohit/code/web_java/cscope.out                                /home/mohit/code/web_java/
+    cscope add /home/mohit/code/ws_java_1.4/cscope.out                             /home/mohit/code/ws_java_1.4/
+    cscope add /home/mohit/code/c2dm/cscope.out                                    /home/mohit/code/c2dm/
+    cscope add /home/mohit/code/cache_java/cscope.out                              /home/mohit/code/cache_java/
+    cscope add /home/mohit/code/oauth_java/cscope.out                              /home/mohit/code/oauth_java/
+    cscope add /home/mohit/code/redis_java/cscope.out                              /home/mohit/code/redis_java/
+    cscope add /home/mohit/code/schedule_java/cscope.out                           /home/mohit/code/schedule_java/
     
-    cscope add /usr/local/code/spring-framework-3.0.5.RELEASE/src/cscope.out      /usr/local/code/spring-framework-3.0.5.RELEASE/src/
+    cscope add /home/mohit/code/spring-framework-3.0.5.RELEASE/src/cscope.out      /home/mohit/code/spring-framework-3.0.5.RELEASE/src/
 endfunction
 
 function! SparkleClientSetup()
     "add cscope db also prepend source paths, cscope can't handle relative
     "paths
 
-    cscope add /usr/local/code/sparkle_client_java/cscope.out /usr/local/code/sparkle_client_java/
-    cscope add /usr/local/code/web_java_1.16/cscope.out       /usr/local/code/web_java_1.16/
+    cscope add /home/mohit/code/sparkle_client_java/cscope.out /home/mohit/code/sparkle_client_java/
+    cscope add /home/mohit/code/web_java_1.16/cscope.out       /home/mohit/code/web_java_1.16/
 endfunction
 
 function! PolyOmniSetup()
-    cscope add /usr/local/Cellar/box2d/2.1.2/cscope.out /usr/local/Cellar/box2d/2.1.2 
+    cscope add /home/mohit/Cellar/box2d/2.1.2/cscope.out /home/mohit/Cellar/box2d/2.1.2 
 endfunction
 
 " Sparkle call
@@ -336,4 +334,9 @@ endif
 "PolyOmni 
 if !empty(matchstr($PWD, "polyomni"))
     call PolyOmniSetup()
+endif
+
+" Include user's local vim config
+if filereadable(expand("~/.vim/vimrc.local"))
+  source ~/.vim/vimrc.local
 endif

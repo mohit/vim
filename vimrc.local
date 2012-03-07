@@ -22,7 +22,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Jinja'
 
-imap ;; <Esc>
+imap jj <Esc>
 
 "set background=dark
 "colorscheme solarized

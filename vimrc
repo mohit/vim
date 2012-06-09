@@ -37,7 +37,6 @@ Bundle 'L9'
 Bundle 'Color-Sampler-Pack'
 Bundle 'BusyBee'
 Bundle 'cscope_macros.vim'
-Bundle 'Jinja'
 Bundle 'octave.vim--'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
@@ -262,7 +261,7 @@ endif
 "default code directory
 let s:codedir = "~/code"
 
-if !empty(matchstr(hostname(), "eric"))
+if !empty(matchstr(hostname(), "evm-ubuntu"))
     let s:codedir = "/usr/local/code"
 endif
 

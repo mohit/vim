@@ -9,18 +9,16 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'SuperTab'
 Bundle 'ZoomWin'
-Bundle 'Vim-JDE'
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
-" ...
+"
 " bundles for mohit
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Jinja'
+Bundle 'mikewest/vimroom' " WriteRoom for vim 
 
 imap jj <Esc>
 
@@ -56,6 +54,9 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 "  markdown
 imap <leader>p <ESC>:w!<CR>:!markdown % < %.html && open %.html<CR><CR>a
 map  <leader>p <ESC>:w!<CR>:!markdown % < %.html && open %.html<CR><CR>a
+
+" groovy syntax for gradle
+au BufNewFile,BufRead *.groovy,*.gradle setf groovy
 
 " etags
 set tags=~/.tags

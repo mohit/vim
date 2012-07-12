@@ -18,7 +18,10 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Jinja'
-Bundle 'mikewest/vimroom' " WriteRoom for vim 
+Bundle 'myusuf3/numbers.vim'
+" WriteRoom for vim 
+Bundle 'mikewest/vimroom' 
+Bundle 't9md/vim-chef'
 
 imap jj <Esc>
 

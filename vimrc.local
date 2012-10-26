@@ -1,15 +1,15 @@
 set expandtab
-
+"
 " My Bundles here:
 "
 " original repos on github
 Bundle 'tpope/vim-fugitive'
-Bundle 'lokaltog/vim-easymotion'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
-Bundle 'ZoomWin'
+Bundle 'vim-scripts/ZoomWin'
 " non github repos
 "
 " bundles for mohit
@@ -18,17 +18,37 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Jinja'
-Bundle 'myusuf3/numbers.vim'
+Bundle 'Lokaltog/vim-powerline'
 " WriteRoom for vim 
 Bundle 'mikewest/vimroom' 
 Bundle 't9md/vim-chef'
+Bundle 'klen/python-mode.git'
+" Python autocomplete
+Bundle 'davidhalter/jedi-vim'
+Bundle 'sjl/gundo.vim'
+" git
+Bundle 'tpope/vim-fugitive'
+Bundle 'gregsexton/gitv'
 
 imap jj <Esc>
 
 "set background=dark
 "colorscheme solarized
 
+" Shortcut to rapidly toggle `set list`
+nmap <leader>l :set list!<CR>
+" Use the same symbols as TextMate for tabstops and EOLs
+set listchars=tab:▸\ ,eol:¬
+
+nnoremap <leader>g :GundoToggle<CR>
+
 filetype plugin indent on     " required!
+set norelativenumber
+set nonumber
+
+" autOcomplete for command mode
+set wildmenu
+set wildmode=full " default
 
 " mappings
 
@@ -38,6 +58,9 @@ map <Leader>n :NERDTreeToggle<CR>
 
 " Command-T configuration
 let g:CommandTMaxHeight=20
+
+" vim-powerline
+let g:Powerline_symbols = 'fancy'
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
@@ -61,5 +84,7 @@ map  <leader>p <ESC>:w!<CR>:!markdown % < %.html && open %.html<CR><CR>a
 " groovy syntax for gradle
 au BufNewFile,BufRead *.groovy,*.gradle setf groovy
 
-" etags
-set tags=~/.tags
+"""""""""""""""""""""""""""PYTHON"""""""""""""""""""""""""""
+
+au FileType python set omnifunc=pythoncomplete#Complete
+

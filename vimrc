@@ -1,4 +1,4 @@
-""""""PATHOGEN INITIALIZATION"""""""""""""""""
+"""""""PATHOGEN INITIALIZATION"""""""""""""""""
 set nocompatible
 filetype off
 
@@ -22,7 +22,6 @@ Bundle 'ervandew/supertab'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'msanders/cocoa.vim'
-Bundle 'sorin-ionescu/python.vim'
 "Bundle 'riobard/scala.vim'
 "Bundle 'Rip-Rip/clang_complete'
 
@@ -37,7 +36,6 @@ Bundle 'L9'
 Bundle 'Color-Sampler-Pack'
 Bundle 'BusyBee'
 Bundle 'cscope_macros.vim'
-Bundle 'octave.vim--'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://repo.or.cz/vcscommand'
@@ -120,45 +118,9 @@ set directory=~/code/.tmpvim/swap
 
 "Tags files
 "autocmd FileType java set tags+=~/.vim/tags/java_tags
-"autocmd FileType python set tags+=~/.vim/tags/python_tags
 
 "regenerate cscope
 nmap <F6> :!find . -iname "*.c" -o -iname "*.cpp" -o -iname "*.cc" -o -iname "*.c++" -o -iname "*.h" -o -iname "*.hpp" -o -iname "*.java" -o -iname "*.py" -o -iname "*.scala" > cscope.files<CR>:!cscope -b<CR>:cs reset<CR><CR>
-
-" scala
-let g:tagbar_type_scala= {
-    \ 'ctagstype' : 'scala',
-    \ 'kinds'     : [
-        \ 'p:packages:1',
-        \ 'V:values:0',
-        \ 'v:variables:0',
-        \ 'T:types:0',
-        \ 't:traits:0',
-        \ 'o:objects:0',
-        \ 'a:abclasses:0',
-        \ 'c:classes:0',
-        \ 'r:caclasses:0',
-        \ 'm:methods:0'
-    \ ],
-    \ 'sro' : '.',
-    \ 'kind2scope' : {
-        \ 'T' : 'type',
-        \ 't' : 'trait',
-        \ 'o' : 'object',
-        \ 'a' : 'abstract class',
-        \ 'c' : 'class',
-        \ 'r' : 'case class'
-    \ },
-    \ 'scope2kind' : {
-        \ 'type' : 'T',
-        \ 'trait' : 't',
-        \ 'object' : 'o',
-        \ 'abstract class' : 'a',
-        \ 'class' : 'c',
-        \ 'case class' : 'r'  
-    \ },
-    \ 'sort'    : 0
-\ }
 
 """""""""""""""""""""""""""SNIPMATE"""""""""""""""""""""""""""""
 let g:snippets_dir="~/.vim/bundle/snipmate-snippets"
@@ -189,11 +151,6 @@ let g:SuperTabDefaultCompletionType = "context"
 "Helps with completions not autofinishing first match
 set completeopt=longest,menu,preview
 
-
-"""""""""""""""""""""""""""PYTHON"""""""""""""""""""""""""""
-au FileType python set omnifunc=pythoncomplete#Complete
-
-
 """""""""""""""""""""""""""ECLIM""""""""""""""""""""""""""""""
 
 "eclim settings
@@ -213,7 +170,7 @@ nmap <silent><leader>m :JavaImportMissing<CR>
 "Taglist
 "nnoremap <silent> <cr> :TlistToggle<CR>
 "let Tlist_WinWidth=40
-nnoremap <silent> <cr> :TagbarToggle<CR>
+nnoremap <silent> <leader><CR> :TagbarToggle<CR>
 let g:tagbar_autofocus=1
 
 "change to next and previous buffers

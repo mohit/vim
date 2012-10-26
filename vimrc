@@ -9,7 +9,11 @@ call vundle#rc()
 Bundle 'gmarik/vundle'
 
 " Bundles :
-Bundle 'git@github.com:esiegel/snipmate-snippets.git'
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+
+Bundle "garbas/vim-snipmate"
 "
 " original repos on github
 Bundle 'scrooloose/nerdtree'
@@ -19,9 +23,10 @@ Bundle 'majutsushi/tagbar'
 Bundle 'tsaleh/vim-align'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
-Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
-Bundle 'msanders/cocoa.vim'
+Bundle 'sorin-ionescu/python.vim'
+"Bundle 'msanders/snipmate.vim'
+"Bundle 'msanders/cocoa.vim'
 "Bundle 'riobard/scala.vim'
 "Bundle 'Rip-Rip/clang_complete'
 
@@ -110,9 +115,9 @@ set hidden
 set ignorecase
 
 "Setup backup location and enable
-set backupdir=~/code/.tmpvim/backup
+set backupdir=~/.vim/backup
 set backup
-set directory=~/code/.tmpvim/swap
+set directory=~/.vim/swp
 
 """""""""""""""""""""""""""CTAGS"""""""""""""""""""""""""""""
 
@@ -263,10 +268,6 @@ function! SparkleClientSetup()
 
     cscope add /home/mohit/code/sparkle_client_java/cscope.out /home/mohit/code/sparkle_client_java/
     cscope add /home/mohit/code/web_java_1.16/cscope.out       /home/mohit/code/web_java_1.16/
-endfunction
-
-function! PolyOmniSetup()
-    cscope add /home/mohit/Cellar/box2d/2.1.2/cscope.out /home/mohit/Cellar/box2d/2.1.2 
 endfunction
 
 " Sparkle call

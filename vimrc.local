@@ -79,6 +79,9 @@ cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 imap <leader>p <ESC>:w!<CR>:!markdown % < %.html && open %.html<CR><CR>a
 map  <leader>p <ESC>:w!<CR>:!markdown % < %.html && open %.html<CR><CR>a
 
+" pasting
+set pastetoggle=<leader>sp
+
 " groovy syntax for gradle
 au BufNewFile,BufRead *.groovy,*.gradle setf groovy
 

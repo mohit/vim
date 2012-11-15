@@ -128,7 +128,7 @@ set directory=~/.vim/swp
 nmap <F6> :!find . -iname "*.c" -o -iname "*.cpp" -o -iname "*.cc" -o -iname "*.c++" -o -iname "*.h" -o -iname "*.hpp" -o -iname "*.java" -o -iname "*.py" -o -iname "*.scala" > cscope.files<CR>:!cscope -b<CR>:cs reset<CR><CR>
 
 """""""""""""""""""""""""""SNIPMATE"""""""""""""""""""""""""""""
-let g:snippets_dir="~/.vim/bundle/snipmate-snippets"
+let gsnippets_dir="~/.vim/bundle/snipmate-snippets"
 
 """""""""""""""""""""""""""JAVA SPECIFIC"""""""""""""""""""""""""""""
 "autocmd FileType java set foldmethod=syntax

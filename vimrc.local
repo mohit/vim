@@ -27,11 +27,13 @@ Bundle 'sjl/gundo.vim'
 " git
 Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
+" mac clipboard
+Bundle 'kana/vim-fakeclip'
+" coffeescript
+Bundle 'kchmck/vim-coffee-script'
 
 imap jj <Esc>
 
-"set background=dark
-"colorscheme solarized
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>

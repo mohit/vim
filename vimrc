@@ -24,9 +24,6 @@ Bundle 'tsaleh/vim-align'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
-"Bundle 'msanders/cocoa.vim'
-"Bundle 'riobard/scala.vim'
-"Bundle 'Rip-Rip/clang_complete'
 
 "Bundle 'MarcWeber/vim-addon-async'
 "Bundle 'MarcWeber/vim-addon-completion'
@@ -55,12 +52,14 @@ set modeline
 set mouse=a
 
 syntax on
-set t_Co=256
-"set background=dark
-"let g:solarized_termcolors=16
 
-"colorscheme solarized 
-colorscheme BusyBee 
+colorscheme solarized 
+"colorscheme BusyBee 
+
+set t_Co=256
+set background=dark
+let g:solarized_termcolors=16
+
 
 "matches previous indent level,
 "intelligently guesses indent (code level)
@@ -225,73 +224,12 @@ if !empty(matchstr(hostname(), "evm-ubuntu"))
     let s:codedir = "/usr/local/code"
 endif
 
-function! AntSingle()
-    "change ant single to current file
-    ! python ~/code/eric/scripts/change_ant_single.py %:p
-    ! ant single
-endfunction
-
-function! SparkleSetup()
-    "add cscope db also prepend source paths, cscope can't handle relative
-    "paths
-
-    cscope add /home/mohit/code/sparkle/sparkle/cscope.out                         /home/mohit/code/sparkle/sparkle
-    cscope add /home/mohit/code/sparkle/model/cscope.out                           /home/mohit/code/sparkle/model
-    cscope add /home/mohit/code/sparkle/common/cscope.out                          /home/mohit/code/sparkle/common
-    cscope add /home/mohit/code/sparkle/invitation_service/cscope.out              /home/mohit/code/sparkle/invitation_service
-    cscope add /home/mohit/code/sparkle/smsrouter/cscope.out                       /home/mohit/code/sparkle/smsrouter
-    cscope add /home/mohit/code/sparkle_demo/cscope.out                            /home/mohit/code/sparkle_demo
-    cscope add /home/mohit/code/sparkle_client_java/sparkle_client_java/cscope.out /home/mohit/code/sparkle_client_java/sparkle_client_java
-
-    cscope add /home/mohit/code/db_java/cscope.out                                 /home/mohit/code/db_java/
-    cscope add /home/mohit/code/factory_java_1.7/cscope.out                        /home/mohit/code/factory_java_1.7/
-    cscope add /home/mohit/code/logging_java/cscope.out                            /home/mohit/code/logging_java/
-    cscope add /home/mohit/code/mobile_account/cscope.out                          /home/mohit/code/mobile_account/
-    cscope add /home/mohit/code/rest_java/cscope.out                               /home/mohit/code/rest_java/
-    cscope add /home/mohit/code/sms_java_1.9/cscope.out                            /home/mohit/code/sms_java_1.9/
-    cscope add /home/mohit/code/web_java/cscope.out                                /home/mohit/code/web_java/
-    cscope add /home/mohit/code/ws_java_1.4/cscope.out                             /home/mohit/code/ws_java_1.4/
-    cscope add /home/mohit/code/c2dm/cscope.out                                    /home/mohit/code/c2dm/
-    cscope add /home/mohit/code/cache_java/cscope.out                              /home/mohit/code/cache_java/
-    cscope add /home/mohit/code/oauth_java/cscope.out                              /home/mohit/code/oauth_java/
-    cscope add /home/mohit/code/redis_java/cscope.out                              /home/mohit/code/redis_java/
-    cscope add /home/mohit/code/schedule_java/cscope.out                           /home/mohit/code/schedule_java/
-    
-    cscope add /home/mohit/code/spring-framework-3.0.5.RELEASE/src/cscope.out      /home/mohit/code/spring-framework-3.0.5.RELEASE/src/
-endfunction
-
-function! SparkleClientSetup()
-    "add cscope db also prepend source paths, cscope can't handle relative
-    "paths
-
-    cscope add /home/mohit/code/sparkle_client_java/cscope.out /home/mohit/code/sparkle_client_java/
-    cscope add /home/mohit/code/web_java_1.16/cscope.out       /home/mohit/code/web_java_1.16/
-endfunction
-
-" Sparkle call
-if !empty(matchstr($PWD, "sparkle[^_]"))
-    "load files if path contains sparkle_demo
-    call SparkleSetup()
-endif
-
-" Sparkle_demo call
-if !empty(matchstr($PWD, "sparkle_demo"))
-    "load files if path contains sparkle_demo
-    call SparkleSetup()
-endif
-
-" Sparkle_client_java 
-if !empty(matchstr($PWD, "sparkle_client_java"))
-    "load files if path contains sparkle_demo
-    call SparkleClientSetup()
-endif
-
 "PolyOmni 
 if !empty(matchstr($PWD, "polyomni"))
     call PolyOmniSetup()
 endif
 
-" Include user's local vim config
+"" Include user's local vim config
 if filereadable(expand("~/.vim/vimrc.local"))
   source ~/.vim/vimrc.local
 endif

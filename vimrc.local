@@ -1,39 +1,4 @@
-set expandtab
-"
-" My Bundles here:
-"
-" original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-" vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'vim-scripts/ZoomWin'
-" non github repos
-"
-" bundles for mohit
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'Jinja'
-Bundle 'Lokaltog/vim-powerline'
-" WriteRoom for vim 
-Bundle 'mikewest/vimroom' 
-Bundle 't9md/vim-chef'
-Bundle 'klen/python-mode.git'
-" Python autocomplete
-Bundle 'davidhalter/jedi-vim'
-Bundle 'sjl/gundo.vim'
-" git
-Bundle 'tpope/vim-fugitive'
-Bundle 'gregsexton/gitv'
-" mac clipboard
-Bundle 'kana/vim-fakeclip'
-" coffeescript
-Bundle 'kchmck/vim-coffee-script'
-
 imap jj <Esc>
-
 
 " Shortcut to rapidly toggle `set list`
 nmap <leader>l :set list!<CR>
@@ -42,11 +7,10 @@ set listchars=tab:▸\ ,eol:¬
 
 nnoremap <leader>g :GundoToggle<CR>
 
-filetype plugin indent on     " required!
 set norelativenumber
 set nonumber
 
-" autOcomplete for command mode
+" autocomplete for command mode
 set wildmenu
 set wildmode=full " default
 
@@ -88,6 +52,8 @@ set pastetoggle=<leader>sp
 au BufNewFile,BufRead *.groovy,*.gradle setf groovy
 
 """""""""""""""""""""""""""PYTHON"""""""""""""""""""""""""""
-
 au FileType python set omnifunc=pythoncomplete#Complete
 
+"""""""""""""""""""""""""""COFFEESCRIPT"""""""""""""""""""""""""""
+au FileType coffee setlocal shiftwidth=2
+au FileType coffee setlocal tabstop=2

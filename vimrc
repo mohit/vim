@@ -37,12 +37,36 @@ Bundle 'Color-Sampler-Pack'
 Bundle 'BusyBee'
 Bundle 'cscope_macros.vim'
 " non github repos
-Bundle 'git://git.wincent.com/command-t.git'
 Bundle 'git://repo.or.cz/vcscommand'
-" ...
+" coffeescript
+Bundle 'kchmck/vim-coffee-script'
+"
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" vim-scripts repos
+Bundle 'L9'
+Bundle 'FuzzyFinder'
+Bundle 'vim-scripts/ZoomWin'
+" bundles for mohit
+Bundle 'altercation/vim-colors-solarized'
+Bundle 'plasticboy/vim-markdown'
+Bundle 'Jinja'
+Bundle 'Lokaltog/vim-powerline'
+" WriteRoom for vim 
+Bundle 'mikewest/vimroom' 
+Bundle 't9md/vim-chef'
+Bundle 'klen/python-mode.git'
+" Python autocomplete
+Bundle 'davidhalter/jedi-vim'
+Bundle 'sjl/gundo.vim'
+" git
+Bundle 'tpope/vim-fugitive'
+Bundle 'gregsexton/gitv'
+" mac clipboard
+Bundle 'kana/vim-fakeclip'
 
 """""""""""""""""""""""""GENERAL"""""""""""""""""""""""""""""""
-set nocompatible
 filetype plugin indent on
 
 "read modeline at bottom of files
@@ -68,8 +92,8 @@ set smartindent
 
 "tab = 4 spaces "indent spaces = 4 and tab to spaces
 set expandtab
-set tabstop=3
-set shiftwidth=3
+set tabstop=4
+set shiftwidth=4
 
 "allowing backspace to work after indent -> see :help i_backspacing
 set backspace=indent,eol,start

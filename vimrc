@@ -38,10 +38,10 @@ Bundle 'BusyBee'
 Bundle 'cscope_macros.vim'
 " non github repos
 Bundle 'git://repo.or.cz/vcscommand'
-" coffeescript
+" coffeescript and node
 Bundle 'kchmck/vim-coffee-script'
+Bundle 'digitaltoad/vim-jade'
 "
-Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
@@ -65,6 +65,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
 " mac clipboard
 Bundle 'kana/vim-fakeclip'
+" saltstack (sls files)
+Bundle 'saltstack/salt-vim'
 
 """""""""""""""""""""""""GENERAL"""""""""""""""""""""""""""""""
 filetype plugin indent on

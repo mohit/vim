@@ -53,7 +53,11 @@ au BufNewFile,BufRead *.groovy,*.gradle setf groovy
 
 """""""""""""""""""""""""""PYTHON"""""""""""""""""""""""""""
 au FileType python set omnifunc=pythoncomplete#Complete
+au FileType python set autoindent foldmethod=indent
 
 """""""""""""""""""""""""""COFFEESCRIPT"""""""""""""""""""""""""""
 au FileType coffee setlocal shiftwidth=2
 au FileType coffee setlocal tabstop=2
+"""""""""""""""""""""""""""YAML"""""""""""""""""""""""""""
+au FileType yaml setlocal shiftwidth=2
+au FileType yaml setlocal tabstop=2

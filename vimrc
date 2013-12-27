@@ -11,7 +11,8 @@ Bundle 'gmarik/vundle'
 " Bundles :
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "honza/snipmate-snippets"
+Bundle "MarcWeber/ultisnips"
+Bundle "jpalardy/vim-slime"
 
 Bundle "garbas/vim-snipmate"
 "
@@ -25,48 +26,71 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
 
+" CoVim Collaborative editor
+"Bundle 'FredKSchott/CoVim'
+" YouCompleteMe code completion
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'Floobits/floobits-vim'
+
 "Bundle 'MarcWeber/vim-addon-async'
 "Bundle 'MarcWeber/vim-addon-completion'
 "Bundle 'MarcWeber/vim-addon-json-encoding'
 "Bundle 'MarcWeber/ensime', {'rtp': 'vim/'}
 
 " vim-scripts repoon
-Bundle 'a.vim'
-Bundle 'L9'
-Bundle 'Color-Sampler-Pack'
-Bundle 'BusyBee'
-Bundle 'cscope_macros.vim'
+"Bundle 'Color-Sampler-Pack'
+"Bundle 'BusyBee'
+"Bundle 'cscope_macros.vim'
 " non github repos
-Bundle 'git://repo.or.cz/vcscommand'
+"Bundle 'git://repo.or.cz/vcscommand'
 " coffeescript and node
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'digitaltoad/vim-jade'
 "
-Bundle 'Lokaltog/vim-easymotion'
+"Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'vim-scripts/ZoomWin'
+Bundle 'ctrlp.vim'
 " bundles for mohit
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Jinja'
 Bundle 'Lokaltog/vim-powerline'
 " WriteRoom for vim 
-Bundle 'mikewest/vimroom' 
-Bundle 't9md/vim-chef'
-Bundle 'klen/python-mode.git'
+"Bundle 'mikewest/vimroom' 
+"Bundle 't9md/vim-chef'
+"Bundle 'klen/python-mode.git'
 " Python autocomplete
-Bundle 'davidhalter/jedi-vim'
+"Bundle 'davidhalter/jedi-vim'
 Bundle 'sjl/gundo.vim'
 " git
 Bundle 'tpope/vim-fugitive'
 Bundle 'gregsexton/gitv'
+" github
+Bundle 'mattn/webapi-vim'
+Bundle 'mattn/gist-vim'
 " mac clipboard
-Bundle 'kana/vim-fakeclip'
+"Bundle 'kana/vim-fakeclip'
 " saltstack (sls files)
 Bundle 'saltstack/salt-vim'
+" Clojure
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
+" GO
+Bundle 'jnwhiteh/vim-golang'
+" MongoDB
+Bundle 'vim-pipe'
+Bundle 'mikewest/vimroom'
+" File types
+Bundle 'csv.vim'
+" Dash integration (for inline documentation search) | Mac Only
+" Bundle 'rizzatti/funcoo.vim'
+" Bundle 'rizzatti/dash.vim'
+
 
 """""""""""""""""""""""""GENERAL"""""""""""""""""""""""""""""""
 filetype plugin indent on
@@ -150,8 +174,16 @@ set directory=~/.vim/swp
 "regenerate cscope
 nmap <F6> :!find . -iname "*.c" -o -iname "*.cpp" -o -iname "*.cc" -o -iname "*.c++" -o -iname "*.h" -o -iname "*.hpp" -o -iname "*.java" -o -iname "*.py" -o -iname "*.scala" > cscope.files<CR>:!cscope -b<CR>:cs reset<CR><CR>
 
-"""""""""""""""""""""""""""SNIPMATE"""""""""""""""""""""""""""""
-let gsnippets_dir="~/.vim/bundle/snipmate-snippets"
+"""""""""""""""""""""""""""UltiSnips"""""""""""""""""""""""""""""
+let g:UltiSnips = {}
+
+let g:UltiSnips.snipmate_ft_filter = {
+            \ 'default' : {'filetypes': ["FILETYPE", "_"] },
+            \ 'html'    : {'filetypes': ["html", "javascript", "_"] },
+            \ 'xhtml'    : {'filetypes': ["xhtml", "html", "javascript", "_"] },
+            \ 'cpp'    : {'filetypes': [] },
+            \ }
+let g:UltiSnips.always_use_first_snippet = 1
 
 """""""""""""""""""""""""""JAVA SPECIFIC"""""""""""""""""""""""""""""
 "autocmd FileType java set foldmethod=syntax

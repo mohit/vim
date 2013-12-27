@@ -9,6 +9,7 @@ nnoremap <leader>g :GundoToggle<CR>
 
 set norelativenumber
 set nonumber
+set scrolloff=10  " always keep cursor 10 lines from end of screen
 
 " autocomplete for command mode
 set wildmenu
@@ -28,6 +29,14 @@ let g:CommandTMaxHeight=20
 
 " vim-powerline
 let g:Powerline_symbols = 'fancy'
+
+" vim python-mode
+let g:pymode_lint_ignore = 'E111'
+let g:pymode_folding = 0
+
+" gist github
+let g:gist_show_privates = 1
+let g:gist_post_private = 1
 
 " ZoomWin configuration
 map <Leader><Leader> :ZoomWin<CR>
@@ -51,8 +60,6 @@ set pastetoggle=<leader>sp
 au BufNewFile,BufRead *.groovy,*.gradle setf groovy
 
 """""""""""""""""""""""""""MARKDOWN"""""""""""""""""""""""""""
-imap <leader>p <ESC>:w!<CR>:!markdown % < %.html && open %.html<CR><CR>a
-map  <leader>p <ESC>:w!<CR>:!markdown % < %.html && open %.html<CR><CR>a
 au FileType mkd setlocal formatoptions=1 
 au FileType mkd setlocal spell spelllang=en_us 
 au FileType mkd set formatprg=par
@@ -64,6 +71,7 @@ au FileType python set omnifunc=pythoncomplete#Complete
 au FileType python set autoindent
 au FileType python set setlocal shiftwidth=2 
 au FileType python set setlocal tabstop=2
+au FileType python set setlocal nonumber
 
 """""""""""""""""""""""""""COFFEESCRIPT"""""""""""""""""""""""""""
 au FileType coffee,jade setlocal shiftwidth=2
@@ -71,3 +79,7 @@ au FileType coffee,jade setlocal tabstop=2
 """""""""""""""""""""""""""YAML"""""""""""""""""""""""""""
 au FileType yaml setlocal shiftwidth=2
 au FileType yaml setlocal tabstop=2
+
+"""""""""""""""""""""""""""CLOJURE"""""""""""""""""""""""""""
+let vimclojure#HighlightBuiltins=1 
+let vimclojure#ParenRainbow=1

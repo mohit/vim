@@ -107,7 +107,7 @@ colorscheme solarized
 "colorscheme BusyBee 
 
 set t_Co=256
-set background=dark
+set background=light
 let g:solarized_termcolors=16
 
 

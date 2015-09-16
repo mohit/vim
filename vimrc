@@ -22,15 +22,16 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
 Bundle 'majutsushi/tagbar'
 Bundle 'tsaleh/vim-align'
-Bundle 'altercation/vim-colors-solarized'
+"Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
+Bundle 'cespare/vim-toml'
 
 " CoVim Collaborative editor
 "Bundle 'FredKSchott/CoVim'
 " YouCompleteMe code completion
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'Floobits/floobits-vim'
+"Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Floobits/floobits-vim'
 
 "Bundle 'MarcWeber/vim-addon-async'
 "Bundle 'MarcWeber/vim-addon-completion'

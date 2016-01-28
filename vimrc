@@ -20,7 +20,6 @@ Bundle "garbas/vim-snipmate"
 Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
-Bundle 'majutsushi/tagbar'
 Bundle 'tsaleh/vim-align'
 "Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
@@ -81,8 +80,6 @@ Bundle 'saltstack/salt-vim'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-classpath'
 Bundle 'guns/vim-clojure-static'
-" GO
-Bundle 'jnwhiteh/vim-golang'
 " MongoDB
 Bundle 'vim-pipe'
 Bundle 'mikewest/vimroom'
@@ -91,6 +88,9 @@ Bundle 'csv.vim'
 " Dash integration (for inline documentation search) | Mac Only
 " Bundle 'rizzatti/funcoo.vim'
 " Bundle 'rizzatti/dash.vim'
+Bundle 'fatih/vim-go'
+Bundle 'majutsushi/tagbar'
+
 
 
 """""""""""""""""""""""""GENERAL"""""""""""""""""""""""""""""""
@@ -227,12 +227,6 @@ endif
 nmap <silent><leader>m :JavaImportMissing<CR>
 
 """""""""""""""""""""""""""MAPPINGS"""""""""""""""""""""""""""
-
-"Taglist
-"nnoremap <silent> <cr> :TlistToggle<CR>
-"let Tlist_WinWidth=40
-nnoremap <silent> <leader><CR> :TagbarToggle<CR>
-let g:tagbar_autofocus=1
 
 "change to next and previous buffers
 noremap <silent> <C-h> :bp<CR>

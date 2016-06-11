@@ -68,29 +68,21 @@ Bundle 'Lokaltog/vim-powerline'
 Bundle 'sjl/gundo.vim'
 " git
 Bundle 'tpope/vim-fugitive'
-Bundle 'gregsexton/gitv'
 " github
-Bundle 'mattn/webapi-vim'
 Bundle 'mattn/gist-vim'
+Bundle 'jez/vim-github-hub'
 " mac clipboard
 "Bundle 'kana/vim-fakeclip'
 " saltstack (sls files)
 Bundle 'saltstack/salt-vim'
-" Clojure
-Bundle 'tpope/vim-fireplace'
-Bundle 'tpope/vim-classpath'
-Bundle 'guns/vim-clojure-static'
-" MongoDB
-Bundle 'vim-pipe'
-Bundle 'mikewest/vimroom'
 " File types
 Bundle 'csv.vim'
-" Dash integration (for inline documentation search) | Mac Only
-" Bundle 'rizzatti/funcoo.vim'
-" Bundle 'rizzatti/dash.vim'
 Bundle 'fatih/vim-go'
 Bundle 'majutsushi/tagbar'
 
+" Typescript  
+" syntax highlighting
+Bundle 'leafgarland/typescript-vim'
 
 
 """""""""""""""""""""""""GENERAL"""""""""""""""""""""""""""""""

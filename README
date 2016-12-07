@@ -1,8 +1,0 @@
-Vim configuration files and plugins.
-
-INSTRUCTIONS:
-These plugins require Vundle which is set as a submodule.
-1) git submodule init
-2) git submodule update
-3) open vim and 
-    :BundleInstall or :BundleInstall! to update all

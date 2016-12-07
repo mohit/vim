@@ -1,63 +1,61 @@
-"""""""PATHOGEN INITIALIZATION"""""""""""""""""
 set nocompatible
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc() 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" let plug be the vundle
+call plug#begin('~/.vim/bundle')
 
-" Bundles :
-Bundle "MarcWeber/vim-addon-mw-utils"
-Bundle "tomtom/tlib_vim"
-Bundle "MarcWeber/ultisnips"
-Bundle "jpalardy/vim-slime"
+" Bundles
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/ultisnips'
+Plug 'jpalardy/vim-slime'
 
-Bundle "garbas/vim-snipmate"
+Plug 'garbas/vim-snipmate'
 "
 " original repos on github
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
-Bundle 'mileszs/ack.vim'
-Bundle 'tsaleh/vim-align'
-Bundle 'ervandew/supertab'
-Bundle 'tpope/vim-surround'
-Bundle 'cespare/vim-toml'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdcommenter'
+Plug 'mileszs/ack.vim'
+Plug 'tsaleh/vim-align'
+Plug 'ervandew/supertab'
+Plug 'tpope/vim-surround'
+Plug 'cespare/vim-toml'
 
 " coffeescript and node
-Bundle 'kchmck/vim-coffee-script'
-Bundle 'digitaltoad/vim-jade'
+Plug 'kchmck/vim-coffee-script'
+Plug 'digitaltoad/vim-jade'
 "
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
-Bundle 'L9'
-Bundle 'FuzzyFinder'
-Bundle 'vim-scripts/ZoomWin'
-Bundle 'ctrlp.vim'
+Plug 'L9'
+Plug 'FuzzyFinder'
+Plug 'vim-scripts/ZoomWin'
+Plug 'ctrlp.vim'
 " bundles for mohit
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'plasticboy/vim-markdown'
-Bundle 'Jinja'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'sjl/gundo.vim'
+Plug 'altercation/vim-colors-solarized'
+Plug 'plasticboy/vim-markdown'
+Plug 'Jinja'
+Plug 'Lokaltog/vim-powerline'
+Plug 'sjl/gundo.vim'
 " git
-Bundle 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 " github
-Bundle 'mattn/gist-vim'
-Bundle 'jez/vim-github-hub'
+Plug 'mattn/gist-vim'
+Plug 'jez/vim-github-hub'
 " mac clipboard
 " saltstack (sls files)
-Bundle 'saltstack/salt-vim'
+Plug 'saltstack/salt-vim'
 " File types
-Bundle 'csv.vim'
-Bundle 'fatih/vim-go'
-Bundle 'majutsushi/tagbar'
+Plug 'csv.vim'
+Plug 'fatih/vim-go'
+Plug 'majutsushi/tagbar'
 
 " Typescript  
 " syntax highlighting
-Bundle 'leafgarland/typescript-vim'
+Plug 'leafgarland/typescript-vim'
 
+" Add plugins to &runtimepath
+call plug#end()
 
 """""""""""""""""""""""""GENERAL"""""""""""""""""""""""""""""""
 filetype plugin indent on

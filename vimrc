@@ -21,33 +21,14 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'mileszs/ack.vim'
 Bundle 'tsaleh/vim-align'
-"Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 Bundle 'tpope/vim-surround'
 Bundle 'cespare/vim-toml'
 
-" CoVim Collaborative editor
-"Bundle 'FredKSchott/CoVim'
-" YouCompleteMe code completion
-"Bundle 'Valloric/YouCompleteMe'
-"Bundle 'Floobits/floobits-vim'
-
-"Bundle 'MarcWeber/vim-addon-async'
-"Bundle 'MarcWeber/vim-addon-completion'
-"Bundle 'MarcWeber/vim-addon-json-encoding'
-"Bundle 'MarcWeber/ensime', {'rtp': 'vim/'}
-
-" vim-scripts repoon
-"Bundle 'Color-Sampler-Pack'
-"Bundle 'BusyBee'
-"Bundle 'cscope_macros.vim'
-" non github repos
-"Bundle 'git://repo.or.cz/vcscommand'
 " coffeescript and node
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'digitaltoad/vim-jade'
 "
-"Bundle 'Lokaltog/vim-easymotion'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " vim-scripts repos
 Bundle 'L9'
@@ -59,12 +40,6 @@ Bundle 'altercation/vim-colors-solarized'
 Bundle 'plasticboy/vim-markdown'
 Bundle 'Jinja'
 Bundle 'Lokaltog/vim-powerline'
-" WriteRoom for vim 
-"Bundle 'mikewest/vimroom' 
-"Bundle 't9md/vim-chef'
-"Bundle 'klen/python-mode.git'
-" Python autocomplete
-"Bundle 'davidhalter/jedi-vim'
 Bundle 'sjl/gundo.vim'
 " git
 Bundle 'tpope/vim-fugitive'
@@ -72,7 +47,6 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'mattn/gist-vim'
 Bundle 'jez/vim-github-hub'
 " mac clipboard
-"Bundle 'kana/vim-fakeclip'
 " saltstack (sls files)
 Bundle 'saltstack/salt-vim'
 " File types

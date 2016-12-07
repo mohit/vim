@@ -83,3 +83,6 @@ au FileType yaml setlocal tabstop=2
 """""""""""""""""""""""""""CLOJURE"""""""""""""""""""""""""""
 let vimclojure#HighlightBuiltins=1 
 let vimclojure#ParenRainbow=1
+""""""""""""""""""""""""""GOLANG"""""""""""""""""""""""""""""
+let g:go_fmt_command = "goimports"
+

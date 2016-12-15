@@ -11,6 +11,7 @@ let g:gitgutter_enabled = 1
 
 " airline-powerline
 let g:airline_powerline_fonts = 1
+let g:airline_section_b = 
 
 " vim python-mode
 let g:pymode_lint_ignore = 'E111'
